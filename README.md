@@ -7,17 +7,18 @@ Monorepo creado con npm workspaces, usando shell en react instanciando aplicacio
 # dev server
 
 
-## comando para ejecutar shell-> React
+### comando para ejecutar shell-> React
 ````npm run start:shell````
 
-## comando para ejecutar app-> React
+### comando para ejecutar app-> React
 ```npm run start:app1```
 
-## comando para ejecutar app-> React
+### comando para ejecutar app-> React
 ```npm run start:app2```
 
-## comando para ejecutar app-> Angular
+### comando para ejecutar app-> Angular
 ```npm run start:banner```
+
 
 
 ## Crear nuevos paquetes
