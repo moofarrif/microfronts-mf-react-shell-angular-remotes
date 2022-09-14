@@ -18,6 +18,7 @@ module.exports = {
     runtimeChunk: false,
   },
   resolve: {
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
     alias: {
       ...sharedMappings.getAliases(),
     },
@@ -32,32 +33,37 @@ module.exports = {
       // For remotes (please adjust)
       name: "app3",
       filename: "remoteEntry.js",
+      /* Este es el punto de entrada de la aplicación remota. */
       exposes: {
         "./App3Index": "./projects/apps/banner/src/loadApp.ts",
+        "./App3Modal":
+          "./projects/apps/banner/src/app/mainViews/modal/modal.component.ts",
       },
-
       shared: share({
         "@angular/core": {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",
+          eager: true,
         },
         "@angular/common": {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",
+          eager: true,
         },
         "@angular/common/http": {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",
+          eager: true,
         },
         "@angular/router": {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",
+          eager: true,
         },
-
         ...sharedMappings.getDescriptors(),
       }),
     }),
