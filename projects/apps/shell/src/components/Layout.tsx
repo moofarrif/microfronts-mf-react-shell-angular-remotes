@@ -1,6 +1,10 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import { app1RoutingPrefix, app2RoutingPrefix } from "../routing/constants";
+import {
+  app1RoutingPrefix,
+  app2RoutingPrefix,
+  app3RoutingPrefix,
+} from "../routing/constants";
 
 export function Layout() {
   return (
@@ -25,6 +29,13 @@ export function Layout() {
           App2 Page1
         </Link>
         <Link to={`/${app2RoutingPrefix}/page-2`}>App2 Page2</Link>
+
+        <Link
+          to={`/${app3RoutingPrefix}/page-1`}
+          style={{ marginLeft: "4rem" }}
+        >
+          App3
+        </Link>
       </nav>
       <Outlet />
     </>
