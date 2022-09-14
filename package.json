@@ -12,8 +12,11 @@
     "start:shell": "npm run start --workspace=shell",
     "start:app1": "npm run start --workspace=app1",
     "start:app2": "npm run start --workspace=app2",
+    "start:banner":"ng serve --project=@apps/banner --port 4001",
 
-    "build:app3": "npm run build --workspace=left-sidebar"
+    "prod:build:banner":"ng build  --configuration production --project=@apps/banner --base-href /banner",
+    "dev:build:banner":"ng build  --configuration development --project=@apps/banner --base-href /banner"
+
   },
   "dependencies": {
     "@angular-architects/module-federation": "^14.0.2",
