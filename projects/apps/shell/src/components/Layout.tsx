@@ -30,12 +30,11 @@ export function Layout() {
         </Link>
         <Link to={`/${app2RoutingPrefix}/page-2`}>App2 Page2</Link>
 
-        <Link
-          to={`/${app3RoutingPrefix}/page-1`}
-          style={{ marginLeft: "4rem" }}
-        >
-          App3
-        </Link>
+        <div style={{ marginTop: "5%" }}>
+          <Link to={`/${app3RoutingPrefix}`} style={{ marginLeft: "4rem" }}>
+            App3 Main
+          </Link>
+        </div>
       </nav>
       <Outlet />
     </>
