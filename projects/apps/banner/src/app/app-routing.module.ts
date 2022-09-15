@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { LayoutComponent } from './mainViews/layout/layout.component';
-import { ModalComponent } from './mainViews/modal/modal.component';
 import { FooterComponent } from './mainViews/footer/footer.component';
 import { HeaderComponent } from './mainViews/header/header.component';
 
@@ -13,7 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: 'page-1',
-        component: ModalComponent,
+        component: HeaderComponent,
       },
       {
         path: 'page-2',

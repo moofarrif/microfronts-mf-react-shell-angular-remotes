@@ -1,10 +1,12 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-
 const deps = require("../../../package.json").dependencies;
+const path = require("path");
+
 module.exports = {
   output: {
     publicPath: "http://localhost:3000/",
+    path: path.resolve(__dirname, "../../../dist/apps/shell"),
   },
 
   resolve: {
