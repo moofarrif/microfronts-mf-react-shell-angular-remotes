@@ -8,13 +8,18 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start:shell": "npm run start --workspace=shell",
     "start:app1": "npm run start --workspace=app1",
     "start:app2": "npm run start --workspace=app2",
     "start:banner": "ng serve --project=@apps/banner --port 4001",
+
+    "prod:build:shell": "npm run build --workspace=shell ",
+    "prod:build:app1": "npm run build --workspace=app1 ",
+    "prod:build:app2": "npm run build --workspace=app2 ",
     "prod:build:banner": "ng build  --configuration production --project=@apps/banner --base-href /banner",
-    "dev:build:banner": "ng build  --configuration development --project=@apps/banner --base-href /banner"
+
+    "dev:build:banner": "ng build  --configuration development --project=@apps/banner --base-href /banner",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@angular-architects/module-federation": "^14.0.2",
