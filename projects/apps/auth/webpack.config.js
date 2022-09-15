@@ -10,7 +10,7 @@ sharedMappings.register(path.join(__dirname, "./../../../tsconfig.json"), [
 
 module.exports = {
   output: {
-    uniqueName: "app3",
+    uniqueName: "auth",
     publicPath: "auto",
     scriptType: "text/javascript",
   },
@@ -31,11 +31,11 @@ module.exports = {
       // library: { type: "module" },
 
       // For remotes (please adjust)
-      name: "app3",
+      name: "auth",
       filename: "remoteEntry.js",
       /* Este es el punto de entrada de la aplicación remota. */
       exposes: {
-        "./App3Index": "./projects/apps/banner/src/loadApp.ts"
+        "./authIndex":   "./projects/apps/auth/src/loadApp.ts",
       },
       shared: share({
         "@angular/core": {
