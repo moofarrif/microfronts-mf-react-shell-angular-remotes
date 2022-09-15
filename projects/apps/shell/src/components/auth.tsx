@@ -1,33 +1,33 @@
 import React, { useEffect, useRef } from "react";
-import { mount } from "app3/App3Modal";
-import { app3RoutingPrefix, shellBrowserHistory } from "../routing/constants";
+import { mount } from "auth/authIndex";
+import { authRoutingPrefix, shellBrowserHistory } from "../routing/constants";
 import { useNavigate } from "react-router-dom";
 
-const app3Basename = `/${app3RoutingPrefix}`;
+const authBasename = `/${authRoutingPrefix}`;
 
 export default () => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Listen to navigation events dispatched inside app3 mfe.
-    const app3NavigationEventHandler = (event: Event) => {
+    // Listen to navigation events dispatched inside auth mfe.
+    const authNavigationEventHandler = (event: Event) => {
       const pathname = (event as CustomEvent<string>).detail;
-      const newPathname = `${app3Basename}${pathname}`;
+      const newPathname = `${authBasename}${pathname}`;
       if (newPathname === shellBrowserHistory.location.pathname) {
         return;
       }
       navigate(newPathname);
     };
-    window.addEventListener("[app3] navigated", app3NavigationEventHandler);
+    window.addEventListener("[auth] navigated", authNavigationEventHandler);
 
-    // Listen to navigation events in shell app to notifify app3 mfe.
+    // Listen to navigation events in shell app to notifify auth mfe.
     const unlistenHistoryChanges = shellBrowserHistory.listen(
       ({ location }) => {
-        if (location.pathname.startsWith(app3Basename)) {
+        if (location.pathname.startsWith(authBasename)) {
           window.dispatchEvent(
             new CustomEvent("[shell] navigated", {
-              detail: location.pathname.replace(app3Basename, ""),
+              detail: location.pathname.replace(authBasename, ""),
             })
           );
         }
@@ -37,25 +37,23 @@ export default () => {
     mount({
       mountPoint: wrapperRef.current!,
       initialPathname: shellBrowserHistory.location.pathname.replace(
-        app3Basename,
+        authBasename,
         ""
       ),
     });
 
     return () => {
       window.removeEventListener(
-        "[app3] navigated",
-        app3NavigationEventHandler
+        "[auth] navigated",
+        authNavigationEventHandler
       );
       unlistenHistoryChanges();
     };
-
-    console.log("useEffect");
   }, []);
 
   return (
-    <div ref={wrapperRef} className="banner-app">
-      <app-modal></app-modal>
+    <div ref={wrapperRef}>
+      <auth-root></auth-root>
     </div>
   );
 };

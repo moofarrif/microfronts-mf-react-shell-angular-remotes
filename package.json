@@ -12,19 +12,16 @@
     "start:app1": "npm run start --workspace=app1",
     "start:app2": "npm run start --workspace=app2",
     "start:banner": "ng serve --project=@apps/banner --port 4001",
-
-    "prod:build:shell": "npm run build --workspace=shell ",
-    "prod:build:app1": "npm run build --workspace=app1 ",
-    "prod:build:app2": "npm run build --workspace=app2 ",
+    "start:auth": "ng serve --project=@apps/auth --port 4002",
     "prod:build:banner": "ng build  --configuration production --project=@apps/banner --base-href /banner",
-
     "dev:build:banner": "ng build  --configuration development --project=@apps/banner --base-href /banner",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod:build:auth": "ng build  --configuration production --project=@apps/auth --base-href /auth",
+    "dev:build:auth": "ng build  --configuration development --project=@apps/auth --base-href /auth"
   },
   "dependencies": {
     "@angular-architects/module-federation": "^14.0.2",
     "@angular-builders/custom-webpack": "^14.0.1",
-    "@angular/animations": "^14.2.0",
+    "@angular/animations": "^14.2.1",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
@@ -32,6 +29,10 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "primeflex": "^3.2.1",
+    "primeicons": "^5.0.0",
+    "primeng": "^14.1.0",
+    "primereact": "^8.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
