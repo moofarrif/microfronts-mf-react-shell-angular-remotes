@@ -52,7 +52,11 @@ export default () => {
   }, []);
 
   return (
-    <div ref={wrapperRef} className="banner-app">
+    <div
+      ref={wrapperRef}
+      className="banner-app"
+      style={{ border: "3px solid #874C62", backgroundColor: "#C98474" }}
+    >
       <app-root></app-root>
     </div>
   );

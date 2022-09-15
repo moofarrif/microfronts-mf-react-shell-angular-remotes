@@ -12,29 +12,23 @@ export function Layout() {
       <nav style={{ marginBottom: "3rem" }}>
         <Link
           to={`/${app1RoutingPrefix}/page-1`}
-          style={{ marginRight: "1rem" }}
+          style={{ marginRight: "0.5rem" }}
         >
           App1 Page1
         </Link>
-        <Link
-          to={`/${app1RoutingPrefix}/page-2`}
-          style={{ marginRight: "1rem" }}
-        >
-          App1 Page2
-        </Link>
+
+        <Link to={`/${app1RoutingPrefix}/page-2`}>App1 Page2</Link>
         <Link
           to={`/${app2RoutingPrefix}/page-1`}
-          style={{ marginRight: "1rem" }}
+          style={{ marginLeft: "3rem", marginRight: "0.5rem" }}
         >
           App2 Page1
         </Link>
         <Link to={`/${app2RoutingPrefix}/page-2`}>App2 Page2</Link>
 
-        <div style={{ marginTop: "5%" }}>
-          <Link to={`/${app3RoutingPrefix}`} style={{ marginLeft: "4rem" }}>
-            App3 Main
-          </Link>
-        </div>
+        <Link to={`/${app3RoutingPrefix}`} style={{ marginLeft: "4rem" }}>
+          App3 Angular App
+        </Link>
       </nav>
       <Outlet />
     </>

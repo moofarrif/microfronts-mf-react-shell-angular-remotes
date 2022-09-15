@@ -28,16 +28,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      // library: { type: "module" },
-
-      // For remotes (please adjust)
       name: "app3",
       filename: "remoteEntry.js",
-      /* Este es el punto de entrada de la aplicación remota. */
       exposes: {
         "./App3Index": "./projects/apps/banner/src/loadApp.ts",
-        "./App3Modal":
-          "./projects/apps/banner/src/app/mainViews/modal/modal.component.ts",
       },
       shared: share({
         "@angular/core": {
