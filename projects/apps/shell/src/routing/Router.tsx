@@ -5,18 +5,19 @@ import {
   unstable_HistoryRouter as HistoryRouter,
   Navigate,
 } from "react-router-dom";
-import AngularModule from "../components/AngularModule";
 import { Layout } from "../components/Layout";
 import {
   app1RoutingPrefix,
   app2RoutingPrefix,
   app3RoutingPrefix,
+  authRoutingPrefix,
   shellBrowserHistory,
 } from "./constants";
 
 const App1Lazy = lazy(() => import("../components/App1"));
 const App2Lazy = lazy(() => import("../components/App2"));
 const App3Lazy = lazy(() => import("../components/App3"));
+const AuthLazy = lazy(() => import("../components/auth"));
 
 export function Router() {
   return (
@@ -27,6 +28,7 @@ export function Router() {
           <Route path={`/${app1RoutingPrefix}/*`} element={<App1Lazy />} />
           <Route path={`/${app2RoutingPrefix}/*`} element={<App2Lazy />} />
           <Route path={`/${app3RoutingPrefix}/*`} element={<App3Lazy />} />
+          <Route path={`/${authRoutingPrefix}/*`} element={<AuthLazy />} />
         </Route>
       </Routes>
     </HistoryRouter>
