@@ -25,4 +25,4 @@ Monorepo creado con npm workspaces, usando shell en react instanciando aplicacio
 
 ```ng g library @libs/my-lib```
 
-```ng g application @apps/my-app --routing --style=scss```
+```ng g application @apps/user --prefix=user --routing  --style=scss```
