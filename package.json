@@ -9,6 +9,8 @@
   "main": "index.js",
   "scripts": {
     "start:shell": "npm run start --workspace=shell",
+    "build:shell": "npm run build --workspace=shell",
+
     "start:app1": "npm run start --workspace=app1",
     "start:app2": "npm run start --workspace=app2",
     "start:banner": "ng serve --project=@apps/banner --port 4001",
