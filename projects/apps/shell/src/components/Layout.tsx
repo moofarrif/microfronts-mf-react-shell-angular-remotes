@@ -4,7 +4,6 @@ import {
   app1RoutingPrefix,
   app2RoutingPrefix,
   app3RoutingPrefix,
-  authRoutingPrefix,
 } from "../routing/constants";
 
 export function Layout() {
@@ -27,17 +26,9 @@ export function Layout() {
         </Link>
         <Link to={`/${app2RoutingPrefix}/page-2`}>App2 Page2</Link>
 
-        <div style={{ marginTop: "5%" }}>
-          <Link to={`/${app3RoutingPrefix}`} style={{ marginLeft: "4rem" }}>
-            App3 Main
-          </Link>
-        </div>
-
-        <div style={{ marginTop: "5%" }}>
-          <Link to={`/${authRoutingPrefix}`} style={{ marginLeft: "4rem" }}>
-            Auth App
-          </Link>
-        </div>
+        <Link to={`/${app3RoutingPrefix}`} style={{ marginLeft: "4rem" }}>
+          App3 Main
+        </Link>
       </nav>
       <Outlet />
     </>

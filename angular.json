@@ -58,11 +58,11 @@
               "projects/apps/banner/src/favicon.ico",
               "projects/apps/banner/src/assets"
             ],
-            "styles": [
-              "projects/apps/banner/src/styles.scss"
-            ],
+            "styles": ["projects/apps/banner/src/styles.scss"],
             "scripts": [],
-            "customWebpackConfig": {"path": "projects/apps/banner/webpack.config.js"}
+            "customWebpackConfig": {
+              "path": "projects/apps/banner/webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -127,117 +127,11 @@
               "projects/apps/banner/src/favicon.ico",
               "projects/apps/banner/src/assets"
             ],
-            "styles": [
-              "projects/apps/banner/src/styles.scss"
-            ],
-            "scripts": []
-          }
-        }
-      }
-    },
-    "@apps/auth": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "projects/apps/auth",
-      "sourceRoot": "projects/apps/auth/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
-          "options": {
-            "outputPath": "dist/apps/auth",
-            "index": "projects/apps/auth/src/index.html",
-            "main": "projects/apps/auth/src/main.ts",
-            "polyfills": "projects/apps/auth/src/polyfills.ts",
-            "tsConfig": "projects/apps/auth/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/apps/auth/src/favicon.ico",
-              "projects/apps/auth/src/assets"
-            ],
-            "styles": [
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/primeng/resources/themes/bootstrap4-light-blue/theme.css",
-              "node_modules/primeflex/primeflex.css"
-            ],
-            "scripts": [],
-            "customWebpackConfig": {"path": "projects/apps/auth/webpack.config.js"}
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "projects/apps/auth/src/environments/environment.ts",
-                  "with": "projects/apps/auth/src/environments/environment.prod.ts"
-                }
-              ],
-              "outputHashing": "all"
-            },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
-          "configurations": {
-            "production": {
-              "browserTarget": "@apps/auth:build:production"
-            },
-            "development": {
-              "browserTarget": "@apps/auth:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "@apps/auth:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/apps/auth/src/test.ts",
-            "polyfills": "projects/apps/auth/src/polyfills.ts",
-            "tsConfig": "projects/apps/auth/tsconfig.spec.json",
-            "karmaConfig": "projects/apps/auth/karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/apps/auth/src/favicon.ico",
-              "projects/apps/auth/src/assets"
-            ],
-            "styles": [
-              "projects/apps/auth/src/styles.scss"
-            ],
+            "styles": ["projects/apps/banner/src/styles.scss"],
             "scripts": []
           }
         }
       }
     }
-    }
+  }
 }

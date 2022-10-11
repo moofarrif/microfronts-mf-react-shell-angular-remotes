@@ -4,8 +4,10 @@ import { Router } from "./routing/Router";
 
 export const App = () => (
   <Suspense fallback={<div>Loading...</div>}>
-    <hr />
-    <Router />
-    <hr />
+    <div className="shell">
+      <hr />
+      <Router />
+      <hr />
+    </div>
   </Suspense>
 );
