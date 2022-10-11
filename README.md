@@ -1,4 +1,4 @@
-# ReactShellRoutesAngularx
+# microfronts-mf-react-shell-angular-remotes
 
 Monorepo creado con npm workspaces, usando shell en react instanciando aplicaciones react con rutas anidadas y aplicaciones remotas de angular con una libreria de angular.
 
