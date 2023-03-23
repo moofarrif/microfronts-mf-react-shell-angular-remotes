@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { genericStyle } from '../../../assets/json-style';
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  constructor(public router: Router) {}
+  
+  label:string =genericStyle?.title?.label;
+  color:string = genericStyle?.title?.color;
+  show:boolean = genericStyle?.title?.show;
+  
 
-  ngOnInit(): void {}
+  constructor(public router: Router) {}
+  
+  
+  ngOnInit(): void {
+    // console.log(this.label);
+  }
 }

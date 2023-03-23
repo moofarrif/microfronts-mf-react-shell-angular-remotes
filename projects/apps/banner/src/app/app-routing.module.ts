@@ -6,7 +6,7 @@ import { HeaderComponent } from './mainViews/header/header.component';
 
 const routes: Routes = [
   {
-    path: 'app-3',
+    path: 'zona-publica-pagos',
     component: LayoutComponent,
     children: [
       {

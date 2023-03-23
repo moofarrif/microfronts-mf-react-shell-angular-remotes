@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = '@apps/banner';
   constructor() {
-    console.log(window.location.pathname);
+    // console.log(window.location.pathname);
   }
 }

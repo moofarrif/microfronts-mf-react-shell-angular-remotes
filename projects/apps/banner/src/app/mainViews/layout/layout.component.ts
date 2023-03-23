@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
   constructor() {
-    console.log('componente padre layout');
+    // console.log('componente padre layout');
   }
 
   ngOnInit(): void {}

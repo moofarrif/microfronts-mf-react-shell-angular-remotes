@@ -32,6 +32,7 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./App3Index": "./projects/apps/banner/src/loadApp.ts",
+        "./App3Module": "./projects/apps/banner/src/app/app.module.ts",
       },
       shared: share({
         "@angular/core": {

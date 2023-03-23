@@ -13,6 +13,6 @@ if (environment.production) {
 const mount = () => {
   platformBrowserDynamic()
     .bootstrapModule(AppModule)
-    .catch((err) => console.error(err));
+    .catch((err) => console.error("err",err));
 };
 export { mount };
