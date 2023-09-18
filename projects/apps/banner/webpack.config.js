@@ -37,25 +37,25 @@ module.exports = {
       shared: share({
         "@angular/core": {
           singleton: true,
-          strictVersion: true,
+          // strictVersion: true,
           requiredVersion: "auto",
           eager: true,
         },
         "@angular/common": {
           singleton: true,
-          strictVersion: true,
+          // strictVersion: true,
           requiredVersion: "auto",
           eager: true,
         },
         "@angular/common/http": {
           singleton: true,
-          strictVersion: true,
+          // strictVersion: true,
           requiredVersion: "auto",
           eager: true,
         },
         "@angular/router": {
           singleton: true,
-          strictVersion: true,
+          // strictVersion: true,
           requiredVersion: "auto",
           eager: true,
         },

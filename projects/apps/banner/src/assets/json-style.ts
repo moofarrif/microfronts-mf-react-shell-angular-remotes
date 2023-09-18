@@ -1,3 +1,3 @@
 export const genericStyle = {
-  title: { label: 'Aplicación Angular', color: 'Red',show:true },
+  title: { label: 'Prueba app', color: 'Orange',show:true },
 };

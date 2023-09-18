@@ -1,13 +1,12 @@
 <nav>
-  <h2 
-  *ngIf="show"
-  [ngStyle]="{'color': color}">{{label}} <i class="fab fa-angular"></i></h2>
+  <h2 *ngIf="show" [ngStyle]="{'color': color}">{{label}} <i class="fab fa-angular"></i>
+  </h2>
 
-  <ul 
-  *ngIf="show"
-  >
+  <ul *ngIf="show">
     <li><a [routerLink]="['zona-publica-pagos']"> Page Home</a></li>
     <li><a [routerLink]="['zona-publica-pagos/page-1']"> Page 1</a></li>
     <li><a [routerLink]="['zona-publica-pagos/page-2']"> Page 2</a></li>
   </ul>
+
+
 </nav>
